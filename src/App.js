@@ -21,7 +21,7 @@ id='qr-code'
 value={data}
 size={100}
 ></QRCode>
-<div className='prev-text'> Your Text Was : {data}</div>
+<div className='prev-text'> Your Text Was : {data.includes("https") || data.includes("http") ?<a href={data}>{data}</a>:<span>{data}</span>}</div>/div>
     </div>
   );
 }
